@@ -61,10 +61,15 @@
   }
   function playVideo() {
     player.playVideo();
+    $('#ans').hide();
+    $('#player').show();
     blurElement('#player', 10-parseInt(player.getCurrentTime()));
   }
   function pauseVideo() {
     player.pauseVideo();
+    $('#ans').text("What song?");
+    $('#ans').show();
+    $('#player').hide();
     setTimeout(playVideo, 2000);
   }
   function blurElement(element, size){
