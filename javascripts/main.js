@@ -1,5 +1,17 @@
 (function() {
-  //$('#player').css('filter', 'blur(150px)');
+  $(document).ready(function(){
+  $('#ans').hide();
+  $("#reveal").click(function(){
+    $('#ans').text(player.getVideoData().title);
+    $('#ans').show();
+    $('#player').hide();
+  });
+  $("#next").click(function(){
+    $('#ans').hide();
+    $('#player').show();
+  });
+});
+
   var i = 0;
   var stopPlayAt = [2, 5, 10], // Stop play at time in seconds
       stopPlayTimer;   // Reference to settimeout call
